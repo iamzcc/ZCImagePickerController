@@ -1,5 +1,8 @@
 ### SCREEN SHOT
 ---
+![Album Select](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/1.jpg)
+![Asset Picker](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/2.jpg)
+![Exceed Maximum Selection](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/3.jpg)
 
 ### FEATURES
 ---
