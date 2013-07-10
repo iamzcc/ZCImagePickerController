@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ZCImagePickerController by iamzcc</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>ZCImagePickerController</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/iamzcc/ZCImagePickerController" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/iamzcc/ZCImagePickerController/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/iamzcc/ZCImagePickerController/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>
+<a name="screen-shot" class="anchor" href="#screen-shot"><span class="octicon octicon-link"></span></a>SCREEN SHOT</h3>
+
+<hr><h3>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>FEATURES</h3>
+
+<hr><ol>
+<li>Simulate the UI and user experience of UIImagePickerController.</li>
+<li>
+<code>Videos and photos are supported</code>, just like the UIImagePickerController.</li>
+<li>
+<strong>Support setting the maximum number of photos and videos that the user can
+select at one time</strong>.</li>
+<li>
+<code>Localization supported.</code> English, Simplified Chinese and Traditional Chinese are supported.</li>
+<li>Auto reload albums when user modify photos and videos in the default photos app.</li>
+<li>Support ARC.</li>
+<li>Support iPhone and iPad.</li>
+</ol><blockquote>
+<p>Require OS : iOS5 or later</p>
+
+<p>Require Frameworks:</p>
+
+<ul>
+<li>AssetsLibrary.framework</li>
+<li>QuartzCore.framework</li>
+</ul>
+</blockquote>
+
+<h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>HOW TO USE</h3>
+
+<hr><p>The image picker is created and displayed in a very similar way of the UIImagePickerController. The demo application shows how it is used.</p>
+
+<pre><code>ZCImagePickerController *imagePickerController = [[ZCImagePickerController alloc] init];
+imagePickerController.imagePickerDelegate = self;
+imagePickerController.maximumAllowsSelectionCount = 5;
+imagePickerController.mediaType = ZCMediaAllAssets;
+
+if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+
+    // You should present the image picker in a popover on iPad.
+
+    _popoverController = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
+    [_popoverController presentPopoverFromRect:_launchButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+else {
+    // Full screen on iPhone and iPod Touch.
+
+    [self.view.window.rootViewController presentViewController:imagePickerController animated:YES completion:NULL];
+}
+</code></pre>
+
+<p>The ZCImagePickerController will return the select images back to the ZCImagePickerControllerDelegate. The delegate contains to methods very similar to the ZCImagePickerControllerDelegate. Instead of returning one dictionary representing a single image the controller sends back an array of similarly structured dictionaries. The two delegate methods are:</p>
+
+<pre><code>- (void)zcImagePickerController:(ZCImagePickerController *)imagePickerController didFinishPickingMediaWithInfo:(NSArray *)info;
+- (void)zcImagePickerControllerDidCancel:(ZCImagePickerController *)imagePickerController;
+</code></pre>
+
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>LICENSE</h3>
+
+<hr><p>The MIT License</p>
+
+<p>Copyright © 2013 ZCCStudio</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/iamzcc">iamzcc</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
