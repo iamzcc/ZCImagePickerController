@@ -30,6 +30,8 @@
 		7425FDAD178A9C5C00935F04 /* VideoOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7425FDA9178A9C5C00935F04 /* VideoOverlay@2x.png */; };
 		7425FDB0178A9C7600935F04 /* ZCLocalized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7425FDAE178A9C7600935F04 /* ZCLocalized.strings */; };
 		7464DC0B178BA8B000DC93E1 /* ZCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7464DC0A178BA8B000DC93E1 /* ZCHelper.m */; };
+		93F9B142182B3E560058CB21 /* SelectionOverlay~iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F9B140182B3E560058CB21 /* SelectionOverlay~iOS7.png */; };
+		93F9B143182B3E560058CB21 /* SelectionOverlay~iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93F9B141182B3E560058CB21 /* SelectionOverlay~iOS7@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		7425FDB2178A9CA100935F04 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "../ZCImagePickerController/zh-Hant.lproj/ZCLocalized.strings"; sourceTree = "<group>"; };
 		7464DC09178BA8B000DC93E1 /* ZCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCHelper.h; path = ../ZCImagePickerController/ZCHelper.h; sourceTree = "<group>"; };
 		7464DC0A178BA8B000DC93E1 /* ZCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZCHelper.m; path = ../ZCImagePickerController/ZCHelper.m; sourceTree = "<group>"; };
+		93F9B140182B3E560058CB21 /* SelectionOverlay~iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SelectionOverlay~iOS7.png"; sourceTree = "<group>"; };
+		93F9B141182B3E560058CB21 /* SelectionOverlay~iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SelectionOverlay~iOS7@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 		7425FDA5178A9C5C00935F04 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				93F9B140182B3E560058CB21 /* SelectionOverlay~iOS7.png */,
+				93F9B141182B3E560058CB21 /* SelectionOverlay~iOS7@2x.png */,
 				7425FDA6178A9C5C00935F04 /* SelectionOverlay.png */,
 				7425FDA7178A9C5C00935F04 /* SelectionOverlay@2x.png */,
 				7425FDA8178A9C5C00935F04 /* VideoOverlay.png */,
@@ -237,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F9B142182B3E560058CB21 /* SelectionOverlay~iOS7.png in Resources */,
 				7425FD6C178A920800935F04 /* InfoPlist.strings in Resources */,
 				7425FD74178A920800935F04 /* Default.png in Resources */,
 				7425FD76178A920800935F04 /* Default@2x.png in Resources */,
@@ -245,6 +252,7 @@
 				7425FDAB178A9C5C00935F04 /* SelectionOverlay@2x.png in Resources */,
 				7425FDAC178A9C5C00935F04 /* VideoOverlay.png in Resources */,
 				7425FDAD178A9C5C00935F04 /* VideoOverlay@2x.png in Resources */,
+				93F9B143182B3E560058CB21 /* SelectionOverlay~iOS7@2x.png in Resources */,
 				7425FDB0178A9C7600935F04 /* ZCLocalized.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

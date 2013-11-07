@@ -3,6 +3,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "ZCAsset.h"
+#import "ZCHelper.h"
 
 static const CGFloat kThumbWidth = 75.0;
 static const CGFloat kThumbHeight = 75.0;
@@ -60,7 +61,15 @@ static const CGFloat kThumbHeight = 75.0;
         
         _selectionOverlayLayer = [CALayer layer];
         _selectionOverlayLayer.frame = thumbFrame;
-        _selectionOverlayLayer.contents = (id)[UIImage imageNamed:@"SelectionOverlay.png"].CGImage;
+        NSString *imageName = [ZCHelper isiOS7] ? @"SelectionOverlay~iOS7" : @"SelectionOverlay";
+        if (![NSThread isMainThread]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _selectionOverlayLayer.contents = (id)[UIImage imageNamed:imageName].CGImage;
+            });
+        }
+        else {
+            _selectionOverlayLayer.contents = (id)[UIImage imageNamed:imageName].CGImage;
+        }
         _selectionOverlayLayer.hidden = !selected;
         
         [self.layer addSublayer:_selectionOverlayLayer];
