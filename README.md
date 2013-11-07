@@ -1,8 +1,13 @@
 ### SCREEN SHOT
 ---
-![Album Select](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/1.jpg)
-![Asset Picker](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/2.jpg)
-![Exceed Maximum Selection](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/3.jpg)
+![Album Select in iOS7](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect~iOS7.PNG)
+![Asset Picker in iOS 7](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker~iOS7.PNG)
+![Exceed Maximum Selection in iOS 7](http://xuexuefeng.com/images/blog2013/Nov/ExceedMaximumSelection~iOS7.PNG)
+
+![Album Select](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect.PNG)
+![Asset Picker](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker.PNG)
+![Exceed Maximum Selection](http://xuexuefeng.com/images/blog2013/Nov/ExceedMaximumSelection.PNG)
+
 
 ### FEATURES
 ---
