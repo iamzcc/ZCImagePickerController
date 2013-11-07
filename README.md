@@ -1,11 +1,15 @@
 ### SCREEN SHOT
 ---
-![Album Select in iOS7](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect~iOS7.PNG)
-![Asset Picker in iOS 7](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker~iOS7.PNG)
+**iOS 7**   
+
+![Album Select in iOS7](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect~iOS7.PNG) 
+![Asset Picker in iOS 7](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker~iOS7.PNG) 
 ![Exceed Maximum Selection in iOS 7](http://xuexuefeng.com/images/blog2013/Nov/ExceedMaximumSelection~iOS7.PNG)
 
-![Album Select](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect.PNG)
-![Asset Picker](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker.PNG)
+**iOS 5&6**   
+
+![Album Select](http://xuexuefeng.com/images/blog2013/Nov/AlbumSelect.PNG) 
+![Asset Picker](http://xuexuefeng.com/images/blog2013/Nov/AssetPicker.PNG) 
 ![Exceed Maximum Selection](http://xuexuefeng.com/images/blog2013/Nov/ExceedMaximumSelection.PNG)
 
 
