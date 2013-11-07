@@ -26,8 +26,15 @@ static const CGFloat kThumbHeight = 75.0;
         
         CALayer *thumbLayer = [CALayer layer];
         thumbLayer.frame = thumbFrame;
-        thumbLayer.contents = (id)[self.asset thumbnail];
         [self.layer addSublayer:thumbLayer];
+        if (![NSThread isMainThread]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                thumbLayer.contents = (id)[self.asset thumbnail];
+            });
+        }
+        else {
+            thumbLayer.contents = (id)[self.asset thumbnail];
+        }
         
         if ([[asset valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypeVideo]) {
             _videoOverlayLayer = [CALayer layer];
