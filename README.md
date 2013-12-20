@@ -2,9 +2,9 @@
 ---
 **iOS 7**
 
-![Album Select](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/1~iOS7.jpg)
-![Asset Picker](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/2~iOS7.jpg)
-![Exceed Maximum Selection](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/3~iOS7.jpg)
+![Album Select](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/1~iOS7.PNG)
+![Asset Picker](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/2~iOS7.PNG)
+![Exceed Maximum Selection](http://iamzcc.github.com/ZCImagePickerController/images/screenshot/3~iOS7.PNG)
 
 **iOS 6**
 
