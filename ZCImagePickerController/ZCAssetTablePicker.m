@@ -72,17 +72,18 @@ static const CGFloat kFooterHeight = 60.0;
     }
     
     _navigationBarTitleLabel.adjustsFontSizeToFitWidth = YES;
-    _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-    _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:1.0];
-    _navigationBarTitleLabel.shadowOffset = CGSizeMake(0, -1);
+    
     _navigationBarTitleLabel.textAlignment = NSTextAlignmentCenter;
     _navigationBarTitleLabel.text = NSLocalizedStringFromTable(@"Loading...", LOCALIZED_STRING_TABLE, nil);
+    
+    [self setTitleLabelEnabled];
     
     _maximumAllowsSelectionCount = ((ZCImagePickerController *)self.navigationController).maximumAllowsSelectionCount;
     self.selectedAssets = [NSMutableArray arrayWithCapacity:_maximumAllowsSelectionCount];
     self.selectedAssetsURLs = [NSMutableSet setWithCapacity:_maximumAllowsSelectionCount];
     
     self.tableView.tableFooterView = _tableFooterLabel;
+    
     self.navigationItem.titleView = _navigationBarTitleLabel;
 	
 	UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
@@ -150,6 +151,27 @@ static const CGFloat kFooterHeight = 60.0;
 }
 
 #pragma mark - Private Methods
+
+- (void)setTitleLabelEnabled {
+    if ([ZCHelper isiOS7orLater]) {
+        _navigationBarTitleLabel.textColor = [UIColor blackColor];
+    }
+    else {
+        _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+        _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:1.0];
+        _navigationBarTitleLabel.shadowOffset = CGSizeMake(0, -1);
+    }
+}
+
+- (void)setTitleLabelDisabled {
+    if ([ZCHelper isiOS7orLater]) {
+        _navigationBarTitleLabel.textColor = [UIColor lightGrayColor];
+    }
+    else {
+        _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+        _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+    }
+}
 
 - (void)reloadData {
     
@@ -262,8 +284,8 @@ static const CGFloat kFooterHeight = 60.0;
         if (photoSelectCount <= _maximumAllowsSelectionCount) {
             self.navigationItem.rightBarButtonItem.enabled = YES;
             self.navigationItem.prompt = nil;
-            _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-            _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:1.0];
+            
+            [self setTitleLabelEnabled];
         }
         else {
             self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -272,8 +294,7 @@ static const CGFloat kFooterHeight = 60.0;
             // On iPad, prompt message in UIPopoverController is not showed correctly, so we use title label to show the prompt message.
             if ([ZCHelper isPhone]) {
                 self.navigationItem.prompt = moreThanMaxString;
-                _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.7];
-                _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.3];
+                [self setTitleLabelDisabled];
             }
             else {
                 _navigationBarTitleLabel.text = moreThanMaxString;
@@ -292,8 +313,8 @@ static const CGFloat kFooterHeight = 60.0;
         _navigationBarTitleLabel.text = NSLocalizedStringFromTable(titleSelect, LOCALIZED_STRING_TABLE, nil);
         self.navigationItem.rightBarButtonItem.enabled = YES;
         self.navigationItem.prompt = nil;
-        _navigationBarTitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-        _navigationBarTitleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:1.0];
+        
+        [self setTitleLabelEnabled];
     }
 }
 

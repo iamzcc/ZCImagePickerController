@@ -21,8 +21,14 @@
     }
 }
 
-+ (BOOL)isiOS7 {
-    return [[UIDevice currentDevice].systemVersion hasPrefix:@"7"];
++ (BOOL)isiOS7orLater {
+    float systemVersion = [[UIDevice currentDevice].systemVersion floatValue];
+    if (systemVersion >= 7.0) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
 }
 
 @end

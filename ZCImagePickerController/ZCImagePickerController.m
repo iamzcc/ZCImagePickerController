@@ -52,7 +52,12 @@
         // change the status bar and navigation bar style
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
         
-        self.navigationBar.barStyle = UIBarStyleBlack;
+        if ([ZCHelper isiOS7orLater]) {
+            self.navigationBar.barStyle = UIBarStyleDefault;
+        }
+        else {
+            self.navigationBar.barStyle = UIBarStyleBlack;
+        }
         self.navigationBar.translucent = YES;
     }
 }

@@ -61,7 +61,7 @@ static const CGFloat kThumbHeight = 75.0;
         
         _selectionOverlayLayer = [CALayer layer];
         _selectionOverlayLayer.frame = thumbFrame;
-        NSString *imageName = [ZCHelper isiOS7] ? @"SelectionOverlay~iOS7" : @"SelectionOverlay";
+        NSString *imageName = [ZCHelper isiOS7orLater] ? @"SelectionOverlay~iOS7" : @"SelectionOverlay";
         if (![NSThread isMainThread]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 _selectionOverlayLayer.contents = (id)[UIImage imageNamed:imageName].CGImage;
