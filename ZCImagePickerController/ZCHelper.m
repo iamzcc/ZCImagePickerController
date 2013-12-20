@@ -21,4 +21,8 @@
     }
 }
 
++ (BOOL)isiOS7 {
+    return [[UIDevice currentDevice].systemVersion hasPrefix:@"7"];
+}
+
 @end
